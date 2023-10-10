@@ -7,4 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, 'public'), // __dirname: webpack.config.js의 위치:: node.js의 약속
     filename: 'index_bundle.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
